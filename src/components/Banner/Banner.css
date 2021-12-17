@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.banner {
+  background: url("../../images/sneha-divias-atelier.jpg");
+  height: 100vh;
+  width: 100vw;
+  margin-right: 10%;
+  background-position: right;
+
+  background-repeat: no-repeat;
+  background-size: 90% 95%;
+  background-attachment: fixed;
+  position: relative;
+}
+.title {
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    white,
+    rgba(245, 245, 245, 0.685)
+  );
+  padding: 20px;
+  text-align: left;
+  top: 20%;
+  left: 0%;
+  font-size: 25px;
+  color: w;
+  color: #244e4d;
+}
+/* Enquiry */
+.enquiry img {
+  height: 90vh;
+  width: 100%;
+}
+.enquiry input {
+  width: 85%;
+  margin-left: 20px;
+  height: 40px;
+}
+.enquiry textarea {
+  width: 85%;
+  height: 100px;
+}
+
+/* footer */
+.footer {
+  background-color: #f4f6f5;
+  color: #244e4d;
+}
+
+/* service */
+.service-card {
+  width: 400px;
+}
+.service-card img {
+  width: 100%;
+}
+.card-title {
+  padding: 20px;
+  text-align: left;
+  padding-left: 30px;
+  height: 100px;
+}
+.card-title a {
+  text-decoration: none;
+  display: none;
+}
+.service-card:hover .card-title a {
+  display: block;
+  color: white;
+}
+.service-card:hover .card-title {
+  background-color: #3c3c45;
+  color: white;
+}
