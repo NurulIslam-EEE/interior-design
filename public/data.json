@@ -1,0 +1,17 @@
+x=[
+    {
+        "t":"Boutiques & Offices",
+        "im1":"https://solutioncarpentry.ae/assets/images/resource/image-7.jpg",
+        "im2":"https://solutioncarpentry.ae/assets/images/b1.jpg",
+        
+        "d":"For any business, interiors are what speaks the most or convey about your products and services. Also, every workspace demands a separate and unique interior. Hence, it is imperative for restaurant areas, office spaces, and retail boutiques to have interiors with a significant impact. Our team specializes in designing the interiors for shops in shopping malls, outdoor street shops, corner shop units and restaurants. They have huge experience in handling flooring, furnishing and wall décor. Moreover, having appealing interiors also boosts the performance of the people working there, which ultimately means a high return for your investment. Similarly, for the clients, interiors impart an exclusive retail experience. Profitability is almost doubled once the interior of a boutique is upgraded to a level suitable more to your business’s tastes.Our interior services for boutiques & offices support clients of all styles and sizes. Whether it is the need to fit everyone in a synchronized manner or optimizing the boutique or restaurant area for ongoing customer service, we have always got you covered.",
+    },
+    {
+        "ti":"Maintenance",
+        "img1":"https://solutioncarpentry.ae/assets/images/resource/image-9.jpg",
+        "img2":"https://solutioncarpentry.ae/assets/images/b3.jpg",
+        "d":"Change is constant, but maintenance is what everything needs. Be it a hotel room or an apartment floor; nothing stays good forever. The experts of Solution Carpentry understand the need of keeping things going.
+        A hotel is a place that needs consistent maintenance. Its room holds the highest value as they offer an exotic experience to the visitors. Our team knows how to handle the work of maintenance at a hotel. We have contracts with five stars hotels in renovating damaged rooms, doors, flooring all over Abu Dhabi.We are also a sub-contractor for the two biggest maintenance companies in UAE. What do we do? We manage all their rented apartments and repair the damages by their tenants. This way, the apartments can be rented out in the minimum possible time once the tenants leave and the maintenance work is completed. Save time, save money and be sure to be delivered the proper work you expect!"
+    
+    }
+]

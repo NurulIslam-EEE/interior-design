@@ -1,0 +1,67 @@
+import React, { useState } from 'react';
+import { useForm } from "react-hook-form";
+import { useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
+import './Login.css';
+
+
+const Login = () => {
+    const location = useLocation();
+    const history = useNavigate();
+    const [newUser, setNewUser] = useState(false);
+    const { signInWithGoogle, registerUser, loginUser, authError } = useAuth();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const onSubmit = data => {
+        if (newUser) {
+            registerUser(data.email, data.password, data.name, location, history);
+
+            console.log('register', newUser)
+            reset();
+        } else {
+            loginUser(data.email, data.password, location, history);
+            reset();
+            console.log('login', newUser)
+        }
+
+        console.log(data);
+
+    };
+    //google sign in
+    const handleGoogleSignIn = () => {
+        signInWithGoogle(location, history);
+    }
+
+    return (
+        <div className='mx-auto d-flex justify-content-center login '>
+            <div>
+                {!newUser ? <form onSubmit={handleSubmit(onSubmit)}>
+
+                    <h4>Please Login</h4>
+                    <input type='email' placeholder="email" {...register("email", { required: true })} /><br />
+                    {errors.email && <span className='text-danger'>This field is required</span>} <br />
+                    <input type='password' placeholder="password" {...register("password", { required: true })} /> <br />
+                    {errors.password && <span className='text-danger'>This field is required</span>} <br />
+                    <button type="submit">Login</button>
+                    <p>New User? <span style={{ cursor: 'pointer' }} className='text-info' onClick={() => setNewUser(true)}>Register</span></p>
+                    <p className='text-danger'>{authError}</p>
+                </form> :
+                    <form onSubmit={handleSubmit(onSubmit)}>
+
+                        <h4>Please Register</h4>
+                        <input placeholder="name" {...register("name", { required: true })} /><br />
+                        {errors.name && <span className='text-danger'>This field is required</span>} <br />
+                        <input type='email' placeholder="email" {...register("email", { required: true })} /><br />
+                        {errors.email && <span className='text-danger'>This field is required</span>} <br />
+                        <input type='password' placeholder="password" {...register("password", { required: true })} /> <br />
+                        {errors.password && <span className='text-danger'>This field is required</span>} <br />
+                        <button type="submit">Create an account</button>
+                        <p>Already Registered? <span style={{ cursor: 'pointer' }} className='text-info' onClick={() => setNewUser(false)}>Login</span></p>
+
+                    </form>}
+                <button onClick={handleGoogleSignIn}>Login with Google</button>
+            </div>
+        </div>
+    );
+};
+
+export default Login;
