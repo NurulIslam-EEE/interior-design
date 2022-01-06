@@ -14,26 +14,26 @@ const Services = () => {
     useEffect(() => {
         dispatch(fetchServices());
     }, []);
-    const books = useSelector((state) => state.books.services)
-    console.log(books)
+    const services = useSelector((state) => state.books.services)
+    // console.log(services)
 
     return (
         <div className='services'>
             <h1>Luxurious & Innovative Services</h1>
             <div className='card-container m-0'>
 
-                <div className="service-card">
+                {services?.map(srv => <div key={srv?._id} className="service-card">
                     <div className="card-img">
-                        <img src={img1} alt="" />
+                        <img src={srv?.image1} alt="" />
                     </div>
                     <div className='card-title'>
-                        <h3>Boutiques & Offices</h3>
-                        <Link to='/'>Read More</Link>
+                        <h3>{srv.title}</h3>
+                        <Link to={`service/${srv?._id}`}>Read More</Link>
                         <span></span>
                     </div>
 
-                </div>
-                <div className="service-card">
+                </div>)}
+                {/*  <div className="service-card">
                     <div className="card-img">
                         <img src={img2} alt="" />
                     </div>
@@ -76,7 +76,7 @@ const Services = () => {
                         <span></span>
                     </div>
 
-                </div>
+                </div> */}
 
             </div>
         </div>

@@ -1,23 +1,24 @@
 import React from 'react';
 import {
-    Switch,
     Route,
     Link,
     Routes
 } from "react-router-dom";
 import AddService from '../AddService/AddService';
-
+import useAuth from '../../hooks/useAuth';
 import './Dashboard.css';
+import MyOrder from './MyOrder';
+import Payment from './Payment/Payment';
 
 const Dashboard = () => {
-
+    const { user } = useAuth();
 
     return (
-        <div className='p-0 m-0 row dashboard'>
+        <div className='p-2 m-0 row dashboard'>
             <div className='d-flex justify-content-between'>
                 <Link className='p-md-5 dashboard-logo ' to='/'><h5 >HELICONIA</h5></Link>
-                <h5 className='p-md-5 dashboard-logo '><i class="fas fa-user"></i> </h5>
-                <h5 className='p-md-5 dashboard-logo'><i class="fas fa-envelope"></i> </h5>
+                <h5 className='p-md-5 dashboard-logo '><i class="fas fa-user"></i> {user?.displayName} </h5>
+                <h5 className='p-md-5 dashboard-logo'><i class="fas fa-envelope"> {user?.email}</i> </h5>
             </div>
 
 
@@ -28,8 +29,9 @@ const Dashboard = () => {
                     </li>
 
                     <li>
-                        <Link to=''>My Orders</Link>
+                        <Link to='myOrder'>My Orders</Link>
                     </li>
+                    {/*
                     <li>
                         <Link to=''>Review</Link>
                     </li>
@@ -44,15 +46,17 @@ const Dashboard = () => {
 
                     <li>
                         <Link to=''>Manage Orders</Link>
-                    </li>
+                    </li> */}
                     <button >Logout</button>
                 </ul>
 
             </div>
-            <div className='col-md-10' style={{ background: 'white' }}>
+            <div className='col-md-10 p-md-4' style={{ background: 'whitesmoke' }}>
 
                 <Routes>
                     <Route path='addServices' element={<AddService />} />
+                    <Route path={`/myOrder`} element={<MyOrder />} />
+                    <Route path={`/payment/:id`} element={<Payment />} />
 
 
                 </Routes>

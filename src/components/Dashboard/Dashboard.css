@@ -8,7 +8,7 @@ body {
   height: 100vh;
 }
 .dashboard-logo {
-  color: #deb624;
+  color: #244e4d;
   text-decoration: none;
 }
 .dashboard-menu ul li {
@@ -17,23 +17,23 @@ body {
 }
 .dashboard-menu a {
   text-decoration: none;
-  color: #deb624;
+  color: #244e4d;
   font-weight: 500;
   font-size: 18px;
 }
 .dashboard-menu a:hover {
-  color: white;
+  color: #deb624;
 }
 .dashboard-menu button {
   padding: 5px 35px;
   border-radius: 30px;
-  border: 2px solid #deb624;
+  border: 2px solid #244e4d;
   background: transparent;
-  color: #deb624;
+  color: #244e4d;
 }
 .dashboard-menu button:hover {
-  background: #deb624;
-  color: #02092b;
+  background: #244e4d;
+  color: white;
 }
 /* .dashboard {
   background: #02092b;
@@ -79,6 +79,7 @@ body {
 .add-service input {
   border: 0;
   border-bottom: 2px solid black;
+  background: transparent;
 }
 .make-admin input,
 .make-admin button {

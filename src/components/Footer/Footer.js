@@ -4,8 +4,8 @@ const Footer = () => {
     return (
         <div className='row m-0 footer p-3 text-start'>
             <div className="col-md-5">
-                <h3>ABOUT SOLUTIONCARPENTRY</h3>
-                <p>Solution Carpentry, born and raised in Europe, has been serving also many customers since 2003 in U.A.E. As a reputed interior design company based in Abu Dhabi, we make dream homes a reality. In addition, we are known to create aesthetically balanced spaces that are infinitely classic, thereby making us a highly reputable firm in the industry.</p>
+                <h3>ABOUT HELICONIA</h3>
+                <p>HELICONIA, born and raised in Europe, has been serving also many customers since 2003 in U.A.E. As a reputed interior design company based in Abu Dhabi, we make dream homes a reality. In addition, we are known to create aesthetically balanced spaces that are infinitely classic, thereby making us a highly reputable firm in the industry.</p>
             </div>
             <div className="col-md-3">
                 <h3>WHAT WE DO</h3>
@@ -25,10 +25,10 @@ const Footer = () => {
                     Phone:
                     +971 50 756 0282 <br />
                     Email:
-                    contact@solutioncarpentry.ae
+                    contact@heliconia.ae
                 </p>
             </div>
-            <p className='text-center'>&copy; All Right Reserved</p>
+            <p className='text-center'>&copy; All Right Reserved by Heliconia</p>
         </div>
     );
 };

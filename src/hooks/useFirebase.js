@@ -12,7 +12,7 @@ const useFirebase = () => {
     const [authError, setAuthError] = useState('');
     const [admin, setAdmin] = useState(false);
     const [token, setToken] = useState('');
-    console.log(user)
+    // console.log(user)
 
     const auth = getAuth();
 
@@ -116,7 +116,7 @@ const useFirebase = () => {
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
         console.log(user)
-        fetch('http://localhost:5000/users', {
+        fetch('https://murmuring-meadow-62116.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
