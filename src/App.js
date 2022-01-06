@@ -17,6 +17,7 @@ import Payment from './components/Payment/Payment';
 import CheckoutForm from './components/Payment/CheckoutForm';
 import Service from './components/Services/Service/Service';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import Contract from './components/Contract/Contract';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="login" element={<Login />} />
+            <Route path="contract" element={<Contract />} />
+
             <Route path="/dashboard/*" element={<Dashboard />} />
             {/* <Route path={`/dashboard/payment/:id`} element={<Payment />} /> */}
             <Route path="service/:id" element={
